@@ -1,0 +1,118 @@
+\chapter{Abstract Algebra}
+
+This chapter introduces the fundamental algebraic structures that form the foundation of modern algebra.
+
+\section{Groups}
+
+\begin{definition}[Binary Operation]
+A \textbf{binary operation} on a set $S$ is a function $*: S \times S \to S$ that assigns to each ordered pair $(a,b)$ of elements in $S$ an element $a * b$ in $S$.
+\end{definition}
+
+\begin{definition}[Group]
+A \textbf{group} is a set $G$ together with a binary operation $*$ such that:
+\begin{enumerate}
+    \item \textbf{Closure:} For all $a, b \in G$, we have $a * b \in G$.
+    \item \textbf{Associativity:} For all $a, b, c \in G$, we have $(a * b) * c = a * (b * c)$.
+    \item \textbf{Identity:} There exists an element $e \in G$ such that for all $a \in G$, $e * a = a * e = a$.
+    \item \textbf{Inverse:} For each $a \in G$, there exists an element $a^{-1} \in G$ such that $a * a^{-1} = a^{-1} * a = e$.
+\end{enumerate}
+\end{definition}
+
+\begin{example}[The Integers under Addition]
+The set $\mathbb{Z}$ with the operation of addition forms a group:
+\begin{itemize}
+    \item Closure: If $a, b \in \mathbb{Z}$, then $a + b \in \mathbb{Z}$
+    \item Associativity: $(a + b) + c = a + (b + c)$ for all $a, b, c \in \mathbb{Z}$
+    \item Identity: $0$ is the identity element since $a + 0 = 0 + a = a$
+    \item Inverse: For each $a \in \mathbb{Z}$, the inverse is $-a$ since $a + (-a) = 0$
+\end{itemize}
+\end{example}
+
+\begin{theorem}
+In any group $G$, the identity element is unique.
+\end{theorem}
+
+\begin{proof}
+Suppose $e$ and $e'$ are both identity elements in $G$. Then:
+\[e = e * e' = e'\]
+where the first equality uses the fact that $e'$ is an identity, and the second equality uses the fact that $e$ is an identity.
+\end{proof}
+
+\subsection{Subgroups}
+
+\begin{definition}[Subgroup]
+Let $(G, *)$ be a group. A subset $H \subseteq G$ is a \textbf{subgroup} of $G$ if $(H, *)$ is itself a group.
+\end{definition}
+
+\begin{theorem}[Subgroup Test]
+A non-empty subset $H$ of a group $G$ is a subgroup if and only if:
+\begin{enumerate}
+    \item For all $a, b \in H$, we have $ab \in H$ (closure)
+    \item For all $a \in H$, we have $a^{-1} \in H$ (inverse)
+\end{enumerate}
+\end{theorem}
+
+\section{Rings}
+
+\begin{definition}[Ring]
+A \textbf{ring} is a set $R$ with two binary operations, addition $(+)$ and multiplication $(\cdot)$, such that:
+\begin{enumerate}
+    \item $(R, +)$ is an abelian group
+    \item Multiplication is associative
+    \item The distributive laws hold: $a \cdot (b + c) = a \cdot b + a \cdot c$ and $(a + b) \cdot c = a \cdot c + b \cdot c$
+\end{enumerate}
+\end{definition}
+
+\begin{example}[The Integers]
+The set $\mathbb{Z}$ with ordinary addition and multiplication forms a ring.
+\end{example}
+
+\begin{definition}[Field]
+A \textbf{field} is a commutative ring with unity in which every non-zero element has a multiplicative inverse.
+\end{definition}
+
+\begin{example}[The Rational Numbers]
+The set $\mathbb{Q}$ of rational numbers forms a field under ordinary addition and multiplication.
+\end{example}
+
+\section{Vector Spaces}
+
+\begin{definition}[Vector Space]
+Let $F$ be a field. A \textbf{vector space} over $F$ is a set $V$ together with operations of vector addition and scalar multiplication such that:
+\begin{enumerate}
+    \item $(V, +)$ is an abelian group
+    \item For all $\alpha \in F$ and $\mathbf{v} \in V$, we have $\alpha \mathbf{v} \in V$
+    \item $\alpha(\mathbf{u} + \mathbf{v}) = \alpha\mathbf{u} + \alpha\mathbf{v}$
+    \item $(\alpha + \beta)\mathbf{v} = \alpha\mathbf{v} + \beta\mathbf{v}$
+    \item $(\alpha\beta)\mathbf{v} = \alpha(\beta\mathbf{v})$
+    \item $1\mathbf{v} = \mathbf{v}$ where $1$ is the multiplicative identity in $F$
+\end{enumerate}
+\end{definition}
+
+\begin{example}[Euclidean Space]
+The set $\mathbb{R}^n$ with componentwise addition and scalar multiplication forms a vector space over $\mathbb{R}$.
+\end{example}
+
+\begin{definition}[Linear Independence]
+Vectors $\mathbf{v_1}, \mathbf{v_2}, \ldots, \mathbf{v_n}$ in a vector space $V$ are \textbf{linearly independent} if the only solution to
+\[\alpha_1 \mathbf{v_1} + \alpha_2 \mathbf{v_2} + \cdots + \alpha_n \mathbf{v_n} = \mathbf{0}\]
+is $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0$.
+\end{definition}
+
+\begin{definition}[Basis]
+A \textbf{basis} for a vector space $V$ is a set of vectors that is both linearly independent and spans $V$.
+\end{definition}
+
+\section{Exercises}
+
+\begin{enumerate}
+    \item Prove that in any group, each element has a unique inverse.
+    
+    \item Show that the set of even integers forms a subgroup of $(\mathbb{Z}, +)$.
+    
+    \item Verify that the set $\mathbb{Z}/n\mathbb{Z}$ forms a ring under addition and multiplication modulo $n$.
+    
+    \item Prove that if $\mathbf{v_1}, \mathbf{v_2}, \ldots, \mathbf{v_n}$ are linearly independent, then any subset is also linearly independent.
+    
+    \item Find a basis for the vector space of $2 \times 2$ matrices over $\mathbb{R}$.
+\end{enumerate}

@@ -1,0 +1,183 @@
+\chapter{Probability Theory}
+
+Probability theory provides the mathematical foundation for analyzing random phenomena and uncertainty.
+
+\section{Sample Spaces and Events}
+
+\begin{definition}[Sample Space]
+A \textbf{sample space} $\Omega$ is the set of all possible outcomes of a random experiment.
+\end{definition}
+
+\begin{definition}[Event]
+An \textbf{event} is a subset of the sample space $\Omega$.
+\end{definition}
+
+\begin{example}[Coin Flipping]
+For the experiment of flipping a coin twice:
+\begin{itemize}
+    \item Sample space: $\Omega = \{HH, HT, TH, TT\}$
+    \item Event "at least one head": $A = \{HH, HT, TH\}$
+    \item Event "exactly one tail": $B = \{HT, TH\}$
+\end{itemize}
+\end{example}
+
+\section{Probability Measures}
+
+\begin{definition}[Probability Measure]
+A \textbf{probability measure} $P$ on a sample space $\Omega$ is a function that assigns to each event $A$ a number $P(A)$ satisfying:
+\begin{enumerate}
+    \item $P(A) \geq 0$ for all events $A$
+    \item $P(\Omega) = 1$
+    \item If $A_1, A_2, \ldots$ are pairwise disjoint events, then:
+    \[P\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} P(A_i)\]
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Basic Properties of Probability]
+For any events $A$ and $B$:
+\begin{enumerate}
+    \item $P(\emptyset) = 0$
+    \item $P(A^c) = 1 - P(A)$
+    \item If $A \subseteq B$, then $P(A) \leq P(B)$
+    \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+\end{enumerate}
+\end{theorem}
+
+\section{Conditional Probability}
+
+\begin{definition}[Conditional Probability]
+The \textbf{conditional probability} of event $A$ given event $B$ with $P(B) > 0$ is:
+\[P(A|B) = \frac{P(A \cap B)}{P(B)}\]
+\end{definition}
+
+\begin{theorem}[Law of Total Probability]
+If $B_1, B_2, \ldots, B_n$ form a partition of $\Omega$ with $P(B_i) > 0$ for all $i$, then:
+\[P(A) = \sum_{i=1}^{n} P(A|B_i)P(B_i)\]
+\end{theorem}
+
+\begin{theorem}[Bayes' Theorem]
+If $B_1, B_2, \ldots, B_n$ form a partition of $\Omega$ with $P(B_i) > 0$ for all $i$, then:
+\[P(B_j|A) = \frac{P(A|B_j)P(B_j)}{\sum_{i=1}^{n} P(A|B_i)P(B_i)}\]
+\end{theorem}
+
+\begin{example}[Medical Testing]
+A disease affects 1\% of the population. A test for the disease is 95\% accurate (both sensitivity and specificity). If someone tests positive, what's the probability they have the disease?
+
+Let $D$ = "has disease" and $T$ = "tests positive".
+\begin{align}
+P(D) &= 0.01, \quad P(D^c) = 0.99 \\
+P(T|D) &= 0.95, \quad P(T|D^c) = 0.05
+\end{align}
+
+By Bayes' theorem:
+\[P(D|T) = \frac{P(T|D)P(D)}{P(T|D)P(D) + P(T|D^c)P(D^c)} = \frac{0.95 \times 0.01}{0.95 \times 0.01 + 0.05 \times 0.99} \approx 0.161\]
+\end{example}
+
+\section{Random Variables}
+
+\begin{definition}[Random Variable]
+A \textbf{random variable} is a function $X: \Omega \to \mathbb{R}$ that assigns a real number to each outcome in the sample space.
+\end{definition}
+
+\begin{definition}[Probability Mass Function]
+For a discrete random variable $X$, the \textbf{probability mass function} (PMF) is:
+\[p_X(x) = P(X = x)\]
+\end{definition}
+
+\begin{definition}[Cumulative Distribution Function]
+The \textbf{cumulative distribution function} (CDF) of a random variable $X$ is:
+\[F_X(x) = P(X \leq x)\]
+\end{definition}
+
+\section{Expected Value and Variance}
+
+\begin{definition}[Expected Value]
+The \textbf{expected value} of a discrete random variable $X$ is:
+\[E[X] = \sum_{x} x \cdot P(X = x)\]
+\end{definition}
+
+\begin{definition}[Variance]
+The \textbf{variance} of a random variable $X$ is:
+\[Var(X) = E[(X - E[X])^2] = E[X^2] - (E[X])^2\]
+\end{definition}
+
+\begin{theorem}[Linearity of Expectation]
+For random variables $X$ and $Y$ and constants $a$ and $b$:
+\[E[aX + bY] = aE[X] + bE[Y]\]
+\end{theorem}
+
+\section{Common Discrete Distributions}
+
+\subsection{Binomial Distribution}
+
+\begin{definition}[Binomial Distribution]
+A random variable $X$ follows a \textbf{binomial distribution} with parameters $n$ and $p$, denoted $X \sim \text{Binomial}(n, p)$, if:
+\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \quad \text{for } k = 0, 1, \ldots, n\]
+\end{definition}
+
+\begin{theorem}
+If $X \sim \text{Binomial}(n, p)$, then:
+\begin{align}
+E[X] &= np \\
+Var(X) &= np(1-p)
+\end{align}
+\end{theorem}
+
+\subsection{Poisson Distribution}
+
+\begin{definition}[Poisson Distribution]
+A random variable $X$ follows a \textbf{Poisson distribution} with parameter $\lambda > 0$, denoted $X \sim \text{Poisson}(\lambda)$, if:
+\[P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} \quad \text{for } k = 0, 1, 2, \ldots\]
+\end{definition}
+
+\begin{theorem}
+If $X \sim \text{Poisson}(\lambda)$, then:
+\begin{align}
+E[X] &= \lambda \\
+Var(X) &= \lambda
+\end{align}
+\end{theorem}
+
+\section{Continuous Distributions}
+
+\subsection{Normal Distribution}
+
+\begin{definition}[Normal Distribution]
+A random variable $X$ follows a \textbf{normal distribution} with parameters $\mu$ and $\sigma^2$, denoted $X \sim N(\mu, \sigma^2)$, if it has probability density function:
+\[f_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
+\end{definition}
+
+\begin{theorem}
+If $X \sim N(\mu, \sigma^2)$, then:
+\begin{align}
+E[X] &= \mu \\
+Var(X) &= \sigma^2
+\end{align}
+\end{theorem}
+
+\begin{theorem}[Central Limit Theorem]
+Let $X_1, X_2, \ldots, X_n$ be independent and identically distributed random variables with mean $\mu$ and variance $\sigma^2$. Then:
+\[\frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \xrightarrow{d} N(0, 1) \quad \text{as } n \to \infty\]
+where $\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i$.
+\end{theorem}
+
+\section{Limit Theorems}
+
+\begin{theorem}[Law of Large Numbers]
+Let $X_1, X_2, \ldots$ be independent and identically distributed random variables with finite mean $\mu$. Then:
+\[\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i \to \mu \quad \text{as } n \to \infty\]
+\end{theorem}
+
+\section{Exercises}
+
+\begin{enumerate}
+    \item A fair six-sided die is rolled twice. Find the probability that the sum is 7 given that at least one roll shows a 3.
+    
+    \item If $X \sim \text{Binomial}(10, 0.3)$, compute $P(X = 3)$ and $E[X]$.
+    
+    \item Customers arrive at a store according to a Poisson process with rate 2 per hour. What is the probability that exactly 3 customers arrive in a 2-hour period?
+    
+    \item If $X \sim N(50, 100)$, find $P(40 < X < 60)$.
+    
+    \item Use Bayes' theorem to solve: A bag contains 3 red balls and 2 blue balls. A ball is drawn and replaced 3 times, with 2 reds and 1 blue observed. What's the probability the bag actually contains 4 red balls and 1 blue ball?
+\end{enumerate}
