@@ -1,10 +1,8 @@
 # 📐 Math Guide
 
-![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)  
-![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)  
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
-
 A comprehensive collection of mathematical notes and explanations, neatly typeset in **LaTeX**. This guide covers a wide range of mathematical topics with theory, worked examples, and formulas all in one place.  
+
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white) ![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 ---
 
