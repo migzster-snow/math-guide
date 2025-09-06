@@ -1,155 +1,26 @@
-\documentclass[12pt,letterpaper]{book}
-
-% Packages
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{geometry}
-\usepackage{fancyhdr}
+\documentclass{book}
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{enumitem}
-\usepackage{tcolorbox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
-% Fix pgfplots compatibility
-\pgfplotsset{compat=1.18}
-
-% Page geometry
-\geometry{margin=1in}
-
-% Fix header height for fancyhdr
-\setlength{\headheight}{14.49998pt}
-\addtolength{\topmargin}{-2.49998pt}
-
-% Header and footer
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\rightmark}
-\fancyhead[RE]{\leftmark}
-
-% Theorem environments
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{example}{Example}[chapter]
-\newtheorem{remark}{Remark}[chapter]
-
-% Custom colors - formal and professional
-\definecolor{theoremcolor}{RGB}{47,79,79}      % Dark slate gray
-\definecolor{definitioncolor}{RGB}{25,25,112}  % Midnight blue
-\definecolor{examplecolor}{RGB}{105,105,105}   % Dim gray
-\definecolor{remarkcolor}{RGB}{139,69,19}      % Saddle brown
-
-% Define common style for boxes
-\tcbset{
-  commonbox/.style={
-    boxrule=0.8pt,
-    arc=2pt,
-    left=10pt,
-    right=10pt,
-    top=8pt,
-    bottom=8pt,
-    fonttitle=\bfseries
-  }
-}
-
-% Colored boxes for theorems - formal styling
-\tcolorboxenvironment{theorem}{
-  commonbox,
-  colback=theoremcolor!8!white,
-  colframe=theoremcolor!80!black,
-  title=Theorem
-}
-
-\tcolorboxenvironment{definition}{
-  commonbox,
-  colback=definitioncolor!6!white,
-  colframe=definitioncolor!70!black,
-  title=Definition
-}
-
-\tcolorboxenvironment{example}{
-  commonbox,
-  colback=examplecolor!5!white,
-  colframe=examplecolor!60!black,
-  title=Example
-}
-
-\tcolorboxenvironment{lemma}{
-  commonbox,
-  colback=theoremcolor!6!white,
-  colframe=theoremcolor!70!black,
-  title=Lemma
-}
-
-\tcolorboxenvironment{corollary}{
-  commonbox,
-  colback=theoremcolor!6!white,
-  colframe=theoremcolor!70!black,
-  title=Corollary
-}
-
-\tcolorboxenvironment{proposition}{
-  commonbox,
-  colback=theoremcolor!6!white,
-  colframe=theoremcolor!70!black,
-  title=Proposition
-}
-
-\tcolorboxenvironment{remark}{
-  commonbox,
-  colback=remarkcolor!4!white,
-  colframe=remarkcolor!50!black,
-  title=Remark
-}
-
-% Title page information
-\title{Advanced Mathematics Textbook\\
-       \large A Comprehensive Guide}
+\title{Mathematics}
 \author{Jonah Benedicto}
-\date{\today}
+\date{September 2025}
 
-% Begin document
 \begin{document}
 
-% Title page
 \maketitle
 
-% Table of contents
-\frontmatter
 \tableofcontents
-\listoffigures
-\listoftables
 
-% Preface
 \chapter*{Preface}
-\addcontentsline{toc}{chapter}{Preface}
 
-This textbook provides a comprehensive introduction to advanced mathematical concepts. Each chapter builds upon previous knowledge while introducing new ideas and techniques essential for higher mathematics.
+\begin{itemize}
+\item Precalculus - Mathematics for Calculus by James Stewart
+\item Calculus by James Stewart
+\end{itemize}
 
-The book is organized into several major areas of mathematics, from foundational algebra and calculus through more advanced topics in analysis, linear algebra, and discrete mathematics. The approach follows classical treatments found in works such as Rudin \cite{rudin1976principles} for analysis, Dummit and Foote \cite{dummit2004abstract} for abstract algebra, and Strang \cite{strang2016introduction} for linear algebra.
-
-Mathematical rigor is emphasized throughout, with careful attention to definitions, theorems, and proofs as advocated by Spivak \cite{spivak2008calculus}. The probability chapter draws from the foundational work of Ross \cite{ross2014first}, while discrete mathematics concepts follow the comprehensive treatment in Rosen \cite{rosen2019discrete}.
-
-\mainmatter
-
-% Include chapters
-\input{parts/01-calculus-and-linear-algebra-i/chapters/01-numbers.tex}
-
-% Bibliography
-\backmatter
-\bibliographystyle{plain}
-\bibliography{references}
+\input{precalculus.tex}
 
 \end{document}
