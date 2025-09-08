@@ -1,6 +1,15 @@
 \part{Precalculus}
 
-\chapter{Algebra}
+\section{Logical Notation}
+\begin{description}
+    \item[for all] $\forall$
+    \item[there exists] $\exists$
+    \item[there does not exist] $\nexists$
+    \item[implies] $\implies$
+    \item[if and only if] $\iff$
+    \item[equivalent to] $\equiv$
+    \item[not equivalent to] $\not\equiv$
+\end{description}
 
 \section{Real Number Systems}
 \begin{description}
@@ -34,6 +43,45 @@ $\mathbb{N} \subset \mathbb{W} \subset \mathbb{Z} \subset \mathbb{Q} \subset \ma
     \item[distributive] $(b + c)a = ba + ca$
 \end{description}
 
+\section{Properties of Negatives}
+\begin{enumerate}
+    \item $(-1)a = -a$
+    \item $-(-a) = a$
+    \item $(-a)b = a(-b) = -(ab)$
+    \item $(-a)(-b) = ab$
+    \item $-(a + b) = -a + -b$
+    \item $-(a - b) = -a + b$
+\end{enumerate}
+
+\section{Properties of Fractions}
+\begin{enumerate}
+    \item $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$
+    \item $\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c}$
+    \item $\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c}$
+    \item $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+    \item $\frac{ac}{bc} = \frac{a}{b}$
+    \item If $\frac{a}{b} = \frac{c}{d}$, then $ad = bc$
+\end{enumerate}
+
+\section{The Real Line}
+
+The real number line is ordered. For any two real numbers $a$ and $b$, one and only one of the following is true:
+\begin{itemize}
+    \item $a < b$
+    \item $a = b$
+    \item $a > b$
+\end{itemize}
+
+\section{Equality/Inequality Notation}
+\begin{description}
+    \item[less than] $<$
+    \item[greater than] $>$
+    \item[less than or equal to] $\leq$
+    \item[greater than or equal to] $\geq$
+    \item[equal to] $=$
+    \item[not equal to] $\neq$
+\end{description}
+
 \section{Set Notation}
 \begin{description}
     \item[set of elements] $\{\}$
@@ -49,17 +97,6 @@ $\mathbb{N} \subset \mathbb{W} \subset \mathbb{Z} \subset \mathbb{Q} \subset \ma
     \item[cardinality] $|A|$
 \end{description}
 
-\section{Equality/Inequality Notation}
-\begin{description}
-    \item[less than] $<$
-    \item[greater than] $>$
-    \item[less than or equal to] $\leq$
-    \item[greater than or equal to] $\geq$
-    \item[equal to] $=$
-    \item[not equal to] $\neq$
-    \item[approximately equal to] $\approx$
-\end{description}
-
 \section{Set Operations}
 \begin{description}
     \item[union] $\cup$
@@ -68,15 +105,88 @@ $\mathbb{N} \subset \mathbb{W} \subset \mathbb{Z} \subset \mathbb{Q} \subset \ma
     \item[complement] $A'$
 \end{description}
 
-
-\section{Logical Notation}
+\section{Interval Notation}
 \begin{description}
-    \item[for all] $\forall$
-    \item[there exists] $\exists$
-    \item[there does not exist] $\nexists$
-    \item[implies] $\implies$
-    \item[if and only if] $\iff$
-    \item[equivalent to] $\equiv$
-    \item[not equivalent to] $\not\equiv$
+    \item[open interval] $(a, b) = \{x \in \mathbb{R} : a < x < b\}$
+    \item[closed interval] $[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}$
+    \item[half-open interval] $[a, b) = \{x \in \mathbb{R} : a \leq x < b\}$
+    \item[half-open interval] $(a, b] = \{x \in \mathbb{R} : a < x \leq b\}$
+    \item[infinite interval] $(a, \infty) = \{x \in \mathbb{R} : x > a\}$
+    \item[infinite interval] $[a, \infty) = \{x \in \mathbb{R} : x \geq a\}$
+    \item[infinite interval] $(-\infty, b) = \{x \in \mathbb{R} : x < b\}$
+    \item[infinite interval] $(-\infty, b] = \{x \in \mathbb{R} : x \leq b\}$
+    \item[infinite interval] $(-\infty, \infty) = \mathbb{R}$
 \end{description}
 
+\section{Absolute Value and Distance}
+\begin{description}
+    \item[absolute value] $|a| =
+        \begin{cases}
+            a, & \text{if } a \geq 0 \\
+            -a, & \text{if } a < 0
+        \end{cases}$
+    \item[distance between two points] $d(a, b) = |a - b|$
+\end{description}
+
+\subsection{Properties of Absolute Value}
+\begin{enumerate}
+    \item $|ab| = |a||b|$
+    \item \textbf{positive square root} $|a|^2 = a^2 \implies |a| = \sqrt{a^2}$ 
+    \item $|a^n| = |a|^n$, where $n \in \mathbb{Z}$ and $a \neq 0$ for $n < 0$
+    \item \textbf{triangle inequality} $|a + b| \leq |a| + |b|$
+\end{enumerate}
+
+\section{Questions}
+
+Precalculus - Mathematics for Calculus by James Stewart, Section 1.1.
+
+\section{Exponential Notation}
+\begin{description}
+    \item $a^n = a \cdot a \cdot \ldots \cdot a$ ($a$ multiplied $n$ times)
+\end{description}
+
+\subsection{Zero and Negative Exponents}
+\begin{description}
+    \item $a^0 = 1$, where $a \neq 0$
+    \item $a^{-n} = \frac{1}{a^n}$,
+\end{description}
+
+\subsection{Laws of Exponents}
+\begin{enumerate}
+    \item $a^m \cdot a^n = a^{m+n}$
+    \item $\frac{a^m}{a^n} = a^{m-n}$
+    \item $(a^m)^n = a^{mn}$
+    \item $(ab)^n = a^n b^n$
+    \item $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$
+    \item $\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$
+    \item $\frac{a^{-n}}{b^{-m}} = \frac{b^m}{a^n}$
+\end{enumerate}
+
+\section{Scientific Notation}
+\begin{description}
+    \item[scientific notation] $x = a \times 10^n$, where $1 \leq |a| < 10$ and $n \in \mathbb{Z}$ 
+\end{description}
+
+\section{Radicals}
+\begin{description}
+    \item[radical] $\sqrt{a} = b \iff b^2 = a$ and $b \geq 0$
+    \item[nth root] $\sqrt[n]{a} = b \iff b^n = a$ and if $n$ is even, then $a, b \geq 0$ 
+\end{description}
+
+\subsection{Properties of nth Roots}
+\begin{enumerate}
+    \item $\sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b}$
+    \item $\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}$
+    \item $\sqrt[m]{\sqrt[n]{a}} = \sqrt[mn]{a}$
+    \item $\sqrt[n]{a^n} = a$ if $n$ is odd
+    \item $\sqrt[n]{a^n} = |a|$ if $n$ is even
+\end{enumerate}
+
+\section{Rational Exponents}
+\begin{description}
+    \item[rational exponent] $a^{\frac{1}{n}} = \sqrt[n]{a}$ and $a^{\frac{m}{n}} = \left(\sqrt[n]{a}\right)^m = \sqrt[n]{a^m}$
+\end{description}
+
+\section{Questions}
+
+Precalculus - Mathematics for Calculus by James Stewart, Section 1.2.
