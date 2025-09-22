@@ -10,59 +10,27 @@
 \begin{document}
 \maketitle
 
-\tableofcontents
-
 \newpage
 
 \section*{Preface}
 This is a math guide for The University of Queensland's MATH1051, MATH1052, MATH2001, MATH1061, and MATH2302 courses. It is intended to be a quick reference for students studying these subjects.
 
-\part{MATH1051 Calculus \& Linear Algebra I}
+\tableofcontents
 
-\chapter{Eigenvalues and Eigenvectors}
+\input{math1051/math1051.tex}
+\input{math1051/chapters/chapter16.tex}
+\input{math1051/chapters/chapter17.tex}
 
-Consider a linear transformation represented by a square matrix, denoted $A$. When a vector is transformed by the matrix, its direction and magnitude can change. \textbf{Eigenvectors}, denoted $\underline{x}$, are special vectors that only change in magnitude (not direction) under this transformation. The magnitude by which the eigenvector is scaled is called the \textbf{eigenvalue}, denoted $\lambda$.
+\input{math1052/math1052.tex}
+\input{math1052/chapters/chapter1.tex}
 
-The relationship between a matrix $A$, its eigenvalues $\lambda$, and eigenvectors $\underline{x}$ is given by the equation:
+\input{math2001/math2001.tex}
+\input{math2001/chapters/chapter1.tex}
 
-$$A \underline{x} = \lambda \underline{x}$$
+\input{math1061/math1061.tex}
+\input{math1061/chapters/chapter1.tex}
 
-This is known as the \textbf{definition of eigenvalues and eigenvectors}.
-
-\section{Eigenvalue Equation}
-
-To find the eigenvalues $\lambda$ of a matrix $A$, we solve the equation:
-$$|A - \lambda I| = 0$$
-
-\section{Eigenvector Equation}
-
-To find the eigenvectors $\underline{x}$ corresponding to a specific eigenvalue $\lambda$, we solve the equation:
-$$(A - \lambda I) \underline{x} = \underline{0}$$
-
-\section{Derivation of Eigenvalue and Eigenvector Equations}
-
-To find the eigenvector equation, we can rearrange the definition of eigenvalues and eigenvectors. 
-
-$$
-\begin{aligned}
-A \underline{x} &= \lambda \underline{x} \\
-\iff A \underline{x} &= \lambda I \underline{x} \\
-\iff A \underline{x} - \lambda \underline{x} &= \underline{0} \\
-\iff (A - \lambda I) \underline{x} &= \underline{0} \\
-\end{aligned}
-$$
-
-To find the eigenvalue equation, note that eigenvectors are non-zero vectors. Therefore, the equation $(A - \lambda I) \underline{x} = \underline{0}$ must have non-trivial solutions. This occurs when the matrix $(A - \lambda I)$ is singular, when its determinant is zero:
-$$|A - \lambda I| = 0$$
-
-Therefore, we have derived both the eigenvalue and eigenvector equations from the definition of eigenvalues and eigenvectors.
-
-\part{MATH1052 Multivariable Calculus \& Linear Algebra I}
-
-\part{MATH2001 Calculus \& Linear Algebra II}
-
-\part{MATH1061 Discrete Mathematics I}
-
-\part{MATH2302 Discrete Mathematics II}
+\input{math2302/math2302.tex}
+\input{math2302/chapters/chapter1.tex}
 
 \end{document}
