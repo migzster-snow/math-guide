@@ -1,5 +1,7 @@
 \documentclass[12pt, letterpaper]{book}
 \usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
 
 \title{Math Guide}
 \author{Jonah Benedicto\thanks{The University of Queensland}}
@@ -19,9 +21,41 @@ This is a math guide for The University of Queensland's MATH1051, MATH1052, MATH
 
 \chapter{Eigenvalues and Eigenvectors}
 
+Consider a linear transformation represented by a square matrix, denoted $A$. When a vector is transformed by the matrix, its direction and magnitude can change. \textbf{Eigenvectors}, denoted $\underline{x}$, are special vectors that only change in magnitude (not direction) under this transformation. The magnitude by which the eigenvector is scaled is called the \textbf{eigenvalue}, denoted $\lambda$.
+
+The relationship between a matrix $A$, its eigenvalues $\lambda$, and eigenvectors $\underline{x}$ is given by the equation:
+
+$$A \underline{x} = \lambda \underline{x}$$
+
+This is known as the \textbf{definition of eigenvalues and eigenvectors}.
+
 \section{Eigenvalues}
 
+To find the eigenvalues $\lambda$ of a matrix $A$, we solve the equation:
+$$|A - \lambda I| = 0$$
+
 \section{Eigenvectors}
+
+To find the eigenvectors $\underline{x}$ corresponding to a specific eigenvalue $\lambda$, we solve the equation:
+$$(A - \lambda I) \underline{x} = \underline{0}$$
+
+\section{Derivation}
+
+To find the eigenvector equation, we can rearrange the definition of eigenvalues and eigenvectors. 
+
+$$
+\begin{aligned}
+A \underline{x} &= \lambda \underline{x} \\
+\iff A \underline{x} &= \lambda I \underline{x} \\
+\iff A \underline{x} - \lambda \underline{x} &= \underline{0} \\
+\iff (A - \lambda I) \underline{x} &= \underline{0} \\
+\end{aligned}
+$$
+
+To find the eigenvalue equation, note that eigenvectors are non-zero vectors. Therefore, the equation $(A - \lambda I) \underline{x} = \underline{0}$ must have non-trivial solutions. This occurs when the matrix $(A - \lambda I)$ is singular, when its determinant is zero:
+$$|A - \lambda I| = 0$$
+
+Therefore, we have derived both the eigenvalue and eigenvector equations from the definition of eigenvalues and eigenvectors.
 
 \part{MATH1052 Multivariable Calculus \& Linear Algebra I}
 
